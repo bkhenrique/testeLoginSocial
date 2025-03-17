@@ -1,29 +1,32 @@
-# 🔐 React Microsoft Login
+# 🔐 Teste de Login com Microsoft
 
-Interface simples em React para autenticação com Microsoft OAuth e integração com backend.
+Interface React simples para testar autenticação OAuth com Microsoft e integração com backend.
 
 ## 📋 Descrição
 
-Este projeto fornece uma implementação pronta para uso da autenticação Microsoft OAuth em aplicações React. Ideal para desenvolvedores que precisam integrar login social Microsoft em seus projetos.
+Este projeto fornece uma implementação pronta para uso da autenticação Microsoft OAuth em aplicações React. Desenvolvido para testar a integração com um backend que recebe e valida tokens de acesso da Microsoft.
 
 ## ✨ Características
 
 - Fluxo completo de autenticação OAuth com Microsoft
-- Obtenção e envio de token para backend
+- Obtenção do token de acesso e envio para backend
 - Interface responsiva e amigável
 - Configuração segura via variáveis de ambiente
 - Instruções detalhadas para configuração no Azure Portal
 
 ## 🚀 Tecnologias
 
-- React
+- React 18
 - TypeScript
-- Vite
+- Vite 6
 - OAuth 2.0
 
 ## 🔧 Como usar
 
-Clone o repositório, configure suas variáveis de ambiente e execute o projeto. Instruções detalhadas no README.md.
+1. Clone o repositório
+2. Configure suas variáveis de ambiente no arquivo `.env`
+3. Execute `npm install` e `npm run dev`
+4. Acesse http://localhost:5173
 
 ## 🔗 Links úteis
 
