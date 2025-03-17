@@ -1,22 +1,27 @@
-# Teste de Login com Microsoft
+# 🔐 Teste de Login com Microsoft
 
-Este é um projeto simples em React para testar a autenticação com Microsoft através de um backend.
+Interface React simples para testar autenticação OAuth com Microsoft e integração com backend.
 
-## Funcionalidades
+## 📋 Descrição
 
-- Interface para autenticação com Microsoft via OAuth
-- Obtenção do token de acesso da Microsoft
-- Envio do token para o backend via POST
-- Feedback visual do processo de autenticação
-- Design responsivo e amigável
+Este projeto fornece uma implementação pronta para uso da autenticação Microsoft OAuth em aplicações React. Desenvolvido para testar a integração com um backend que recebe e valida tokens de acesso da Microsoft.
 
-## Requisitos
+## ✨ Características
 
-- Node.js (versão 14 ou superior)
-- Backend configurado para receber tokens Microsoft em `http://localhost:3001/api/v1/auth/microsoft`
-- Aplicativo registrado no Azure Portal (para obter o Client ID)
+- Fluxo completo de autenticação OAuth com Microsoft
+- Obtenção do token de acesso e envio para backend
+- Interface responsiva e amigável
+- Configuração segura via variáveis de ambiente
+- Instruções detalhadas para configuração no Azure Portal
 
-## Configuração do Aplicativo no Azure Portal
+## 🚀 Tecnologias
+
+- React 18
+- TypeScript
+- Vite 6
+- OAuth 2.0
+
+## 🔧 Configuração do Aplicativo no Azure Portal
 
 Para que o login com Microsoft funcione, você precisa registrar um aplicativo no Azure Portal:
 
@@ -28,7 +33,7 @@ Para que o login com Microsoft funcione, você precisa registrar um aplicativo n
 6. Clique em "Registrar"
 7. Após o registro, copie o "ID do aplicativo (cliente)" mostrado na página de visão geral
 
-## Variáveis de Ambiente
+## ⚙️ Variáveis de Ambiente
 
 Este projeto utiliza variáveis de ambiente para configuração. Siga os passos abaixo:
 
@@ -43,27 +48,29 @@ VITE_API_URL=http://localhost:3001/api/v1
 
 **Importante**: O arquivo `.env` contém informações sensíveis e não deve ser compartilhado ou enviado para o repositório. Ele já está incluído no `.gitignore`.
 
-### Solução de Problemas Comuns
+## 🚀 Como usar
 
-- **Erro "unauthorized_client"**: Verifique se o Client ID está correto e se o aplicativo está registrado corretamente.
-- **Erro de redirecionamento**: Certifique-se de que o URI de redirecionamento no Azure Portal corresponde exatamente ao URL do seu aplicativo.
-- **Erro de escopo**: Verifique se os escopos solicitados estão configurados no Azure Portal.
+1. Clone o repositório
+   ```
+   git clone https://github.com/bkhenrique/testeLoginSocial.git
+   cd testeLoginSocial
+   ```
 
-## Como executar
-
-1. Clone este repositório
-2. Instale as dependências:
+2. Instale as dependências
    ```
    npm install
    ```
+
 3. Configure as variáveis de ambiente conforme instruções acima
-4. Inicie o servidor de desenvolvimento:
+
+4. Inicie o servidor de desenvolvimento
    ```
    npm run dev
    ```
+
 5. Acesse `http://localhost:5173` no seu navegador
 
-## Fluxo de autenticação
+## 🔄 Fluxo de autenticação
 
 1. O usuário clica no botão "Login com Microsoft"
 2. É redirecionado para a página de login da Microsoft
@@ -73,36 +80,18 @@ VITE_API_URL=http://localhost:3001/api/v1
 6. O backend valida o token e retorna uma resposta
 7. O aplicativo exibe o resultado da autenticação
 
-## Estrutura do projeto
+## 📁 Estrutura do projeto
 
 - `src/App.tsx` - Componente principal com a lógica de autenticação
 - `src/App.css` - Estilos da aplicação
 - `.env.example` - Modelo para configuração das variáveis de ambiente
 - `.env` - Arquivo de configuração local (não versionado)
 
-## O que foi feito
+## 🔗 Links úteis
 
-- Criação de um projeto React com Vite e TypeScript
-- Implementação do fluxo de autenticação OAuth com Microsoft
-- Extração do token de acesso da URL após redirecionamento
-- Envio do token para o backend via POST
-- Feedback visual do processo de autenticação
-- Estilização da interface para melhor experiência do usuário
-- Adição de instruções detalhadas para configuração do aplicativo no Azure Portal
-- Configuração de variáveis de ambiente para maior segurança
+- [Documentação OAuth da Microsoft](https://docs.microsoft.com/pt-br/azure/active-directory/develop/v2-oauth2-auth-code-flow)
+- [Portal de Registro de Aplicativos](https://portal.azure.com/#blade/Microsoft_AAD_RegisteredApps/ApplicationsListBlade)
 
-## O que falta fazer
+## 📝 Licença
 
-- Implementar armazenamento do token em localStorage ou cookies
-- Adicionar página de perfil do usuário após login bem-sucedido
-- Implementar refresh token
-- Adicionar opção de logout
-- Melhorar o tratamento de erros
-
-## Tecnologias utilizadas
-
-- React
-- TypeScript
-- Vite
-- CSS
-- OAuth 2.0
+Este projeto está licenciado sob a licença MIT - veja o arquivo [LICENSE](LICENSE) para mais detalhes.
